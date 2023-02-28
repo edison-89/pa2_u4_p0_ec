@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form th:action="@{/personas/insertar}" th:object="${persona}" th:method="POST">
+		<table>
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text" id="nombre" th:field="${persona.nombre}"></td>
+			</tr>
+			<tr>
+				<td><label>Apellido:</label></td>
+				<td><input type="text" id="ape" th:field="${persona.apellido}"></td>
+			</tr>
+			<tr>
+				<td><label>Cedula:</label></td>
+				<td><input type="text" id="cedu" th:field="${persona.cedula}"></td>
+			</tr>
+			<tr>
+				<td><label>Genero:</label></td>
+				<td><input type="text" id="generp" th:field="${persona.genero}"></td>
+			</tr>
+		</table>
+		<input type="submit" value="Guardar">
+	</form>
+</body>
+
+</html>
